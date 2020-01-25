@@ -22,11 +22,15 @@
         
         @media (min-width: 700px) {
             .nav-item {
-                padding-left: 1rem;
-                padding-right: 1rem;
+                padding-left: 0.2rem;
+                padding-right: 0.2rem;
             }
             .text-center-desktop {
                 text-align: center!important;
+            }
+            .grey-bk {
+                border-top: 1px solid #d1d1d1;
+                border-bottom: 1px solid #d1d1d1;
             }
         }
         
@@ -37,16 +41,18 @@
                 text-align: center;
                 color: white;
             }
+            .grey-bk {
+                background-color: #f4f4f4;
+                border-top: 1px solid #d1d1d1;
+                border-bottom: 1px solid #d1d1d1;
+            }
+            .dropdown-item {
+                text-align: center;
+            }
         }
         
         .navbar-light {
             background-color: white;
-        }
-        
-        .grey-bk {
-            background-color: #ededed;
-            border-top: 1px solid #d1d1d1;
-            border-bottom: 1px solid #d1d1d1;
         }
         /* unvisited link */
         
@@ -75,50 +81,93 @@
             font-weight: 700;
             font-size: 0.9em;
         }
+        
+        a.dark:hover {
+            color: #767676;
+            font-weight: 700;
+            font-size: 0.9em;
+        }
+        
+        .article-image {
+            padding-left: 0.1rem;
+            padding-right: 0.1rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        
+        .navbar-brand {
+            position: absolute;
+            left: calc(50% - 75px);
+            top: 8px;
+        }
     </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-light">
+
+
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-            <a class="navbar-brand abs" href="#"><img src="images/logo.png" class="img-fluid"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+            <a class="navbar-brand font-weight-bold" href="#"><img src="images/logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#al-center-nav" aria-controls="al-center-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="navbar-collapse collapse" id="collapsingNavbar">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home</a>
+            <div class="collapse navbar-collapse" id="al-center-nav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle mr-2" href="#" id="pMenuDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            News <span class="sr-only">(current)</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="pMenuDropdown">
+                            <a class="dropdown-item" href="#">Item 1</a>
+                            <a class="dropdown-item" href="#">Item 2</a>
+                            <a class="dropdown-item" href="#">Item 3</a>
+                        </div>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link mr-2" href="#">#LabourLeadership</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="//codeply.com">News</a>
+                        <a class="nav-link mr-2" href="#">Interviews</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#myAlert" data-toggle="collapse">#LabourLeadership</a>
-                    </li>
+
+
                 </ul>
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="" data-target="#myModal" data-toggle="modal">About</a>
+
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link dropdown-toggle ml-2" href="#" id="sMenuDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> About</a>
+                        <div class="dropdown-menu" aria-labelledby="sMenuDropdown">
+                            <a class="dropdown-item" href="#">Item 1</a>
+                            <a class="dropdown-item" href="#">Item 2 </a>
+                        </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="" data-target="#myModal" data-toggle="modal">Brexit</a>
+                        <a href="#contact" class="nav-link ml-2">Subscribe</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="" data-target="#myModal" data-toggle="modal">Videos</a>
+                        <a href="#search" class="nav-link m-0 ml-2">Search <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1"><circle cx="10.5" cy="10.5" r="7.5"></circle><line x1="21" y1="21" x2="15.8" y2="15.8"></line></svg>
+                        </a>
                     </li>
+
+
                 </ul>
             </div>
+
         </div>
     </nav>
+
+
+
+
 
     <div class="container grey-bk">
         <div class="row p-2">
             <div class="col-8">
-                <small>Saturday, January 25, 2020</small>
+                <small>Saturday, January 25</small>
             </div>
             <div class="col-4 text-right">
-                <small><a href="#">Subscribe Now</a></small>
+                <small><a href="#" class="px-2">Join us</a> <a href="#">Login</a></small>
             </div>
         </div>
     </div>
@@ -176,10 +225,63 @@
             <div class="col-2 d-none d-md-block"></div>
         </div>
 
-
+        <div class="row">
+            <div class="col">
+                <hr />
+            </div>
+        </div>
 
     </div>
+
     <div class="container">
+        <article>
+            <div class="row">
+                <div class="col p-3">
+
+
+                    <h1><a href="#" class="dark">Leadership candidates challenged to back electoral reform</a></h1>
+
+                    <a href="#" class="dark"><img src="https://via.placeholder.com/800x400" class="img-fluid thumbnail article-image mx-auto d-block"></a>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                        specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                    </p>
+
+                    <small>10 hours ago</small>
+                    <hr />
+                </div>
+            </div>
+        </article>
+
+        <article>
+            <div class="row">
+                <div class="col p-3">
+                    <h1><a href="#" class="dark">Leadership candidates challenged to back electoral reform</a></h1>
+                    <small>12 hours ago</small>
+                    <hr />
+                </div>
+            </div>
+        </article>
+
+        <article>
+            <div class="row">
+                <div class="col p-3">
+                    <h1><a href="#" class="dark">Leadership candidates challenged to back electoral reform</a></h1>
+                    <small>18 hours ago</small>
+                    <hr />
+                </div>
+            </div>
+        </article>
+
+        <article>
+            <div class="row">
+                <div class="col p-3">
+                    <h1><a href="#" class="dark">Leadership candidates challenged to back electoral reform</a></h1>
+                    <small>Yesterday</small>
+                </div>
+            </div>
+        </article>
+
+
 
     </div>
 
