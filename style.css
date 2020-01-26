@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway&display=swap');
+body,
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    line-height: 180%;
+}
+
+small {
+    font-family: 'Raleway', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+nav {
+    font-family: 'Raleway', sans-serif;
+}
+
+.smallish {
+    font-size: 0.9em;
+}
+
+@media (min-width: 768px) {
+    .navbar-brand.abs {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        text-align: center;
+    }
+}
+
+@media (min-width: 700px) {
+    .nav-item {
+        padding-left: 0.2rem;
+        padding-right: 0.2rem;
+    }
+    .text-center-desktop {
+        text-align: center!important;
+    }
+    .grey-bk {
+        border-top: 1px solid rgba(0, 0, 0, .1);
+        border-bottom: 1px solid rgba(0, 0, 0, .1);
+    }
+}
+
+@media (max-width: 699px) {
+    .nav-item {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        text-align: center;
+    }
+    .grey-bk {
+        background-color: #f4f4f4;
+        border-top: 1px solid #d1d1d1;
+        border-bottom: 1px solid #d1d1d1;
+    }
+    .dropdown-item {
+        text-align: center;
+    }
+    .hidden-mobile {
+        display: none;
+    }
+}
+
+.navbar-light {
+    background-color: white;
+}
+
+
+/* unvisited link */
+
+a:link {
+    color: #fe4246;
+}
+
+
+/* visited link */
+
+a:visited {
+    color: #fe4246;
+}
+
+
+/* mouse over link */
+
+a:hover {
+    color: #b70f0d;
+    text-decoration: none;
+}
+
+
+/* selected link */
+
+a:active {
+    color: #b70f0d;
+}
+
+a.dark {
+    color: black;
+    font-weight: 700;
+    font-size: 0.9em;
+}
+
+a.dark:hover {
+    color: #767676;
+    font-weight: 700;
+    font-size: 0.9em;
+}
+
+.navbar-brand {
+    position: absolute;
+    left: calc(50% - 75px);
+    top: 8px;
+}
+
+p.newspaper::first-letter {
+    font-size: 200%;
+}
+
+.vertical-line {
+    background-color: rgba(0, 0, 0, .1);
+    min-height: 100%;
+    width: 1px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #494949;
+    border-color: #000000;
+}
+
+.btn-primary:visited {
+    color: #fff;
+    background-color: #494949;
+    border-color: #000000;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #000;
+    border-color: #000000;
+}
+
+.btn-primary:active {
+    color: #fff;
+    background-color: #494949;
+    border-color: #000000;
+}
+
+.nlh {
+    line-height: normal;
+    font-size: 0.7em;
+}
+
+.footer-bk {
+    background-color: #e7e6e6;
+}
+
+.footer-padding {
+    padding-top: 3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.nav-item-border {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
